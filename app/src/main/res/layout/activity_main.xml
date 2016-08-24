@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <ImageView
+        android:src="@drawable/fitness"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_vertical_margin"
+        android:layout_weight="2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Fitness Quiz"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+
+            <TextView
+                style="@style/questions"
+                android:text="1. No pain no gain?" />
+
+            <TextView
+                style="@style/questions"
+                android:text="2. Should you do cardio before you strength train? " />
+
+            <TextView
+                style="@style/questions"
+                android:text="3.  Thirty minutes of straight exercise is better than 10 minutes three times a day? " />
+
+            <TextView
+                style="@style/questions"
+                android:text="4. You should warm up every time you exercise and cool down afterward?" />
+
+            <TextView
+                style="@style/questions"
+                android:text="5. Water is always better then sports drinks?" />
+
+            <TextView
+                style="@style/questions"
+                android:text="6. What exercises will work the back muscles? (HINT: multiple answers)" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
