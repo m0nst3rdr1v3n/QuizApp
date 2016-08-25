@@ -80,7 +80,7 @@
                 style="@style/questions"
                 android:text="3.  Thirty minutes of straight exercise is better than 10 minutes three times a day. " />
 
-            <RadioButton
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -95,7 +95,7 @@
                     android:id="@+id/radio_button_false3"
                     android:onClick="onRadioButtonClicked"/>
 
-            </RadioButton>
+            </RadioGroup>
 
             <TextView
                 style="@style/questions"
@@ -122,7 +122,7 @@
                 style="@style/questions"
                 android:text="5. Water is always better then sports drinks." />
 
-            <RadioButton
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -137,7 +137,7 @@
                     android:id="@+id/radio_button_false5"
                     android:onClick="onRadioButtonClicked"/>
 
-            </RadioButton>
+            </RadioGroup>
 
             <TextView
                 style="@style/questions"
