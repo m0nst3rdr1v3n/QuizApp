@@ -38,98 +38,106 @@
                 style="@style/questions"
                 android:text="1. No pain no gain?" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <CheckBox
-                    style="@style/checkbox_true"
-                    android:id="@+id/checkbox_true1"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_true"
+                    android:id="@+id/radio_button_true1"
+                    android:onClick="onRadioButtonClicked"/>
 
-                <CheckBox
-                    style="@style/checkbox_false"
-                    android:id="@+id/checkbox_false1"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_false"
+                    android:id="@+id/radio_button_false1"
+                    android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioGroup>
 
             <TextView
                 style="@style/questions"
                 android:text="2. You should do cardio before you strength train. " />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <CheckBox
-                    style="@style/checkbox_true"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_true"
+                    android:id="@+id/radio_button_true2"
+                    android:onClick="onRadioButtonClicked"/>
 
-                <CheckBox
-                    style="@style/checkbox_false"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_false"
+                    android:id="@+id/radio_button_false2"
+                    android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioGroup>
 
             <TextView
                 style="@style/questions"
                 android:text="3.  Thirty minutes of straight exercise is better than 10 minutes three times a day. " />
 
-            <LinearLayout
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <CheckBox
-                    style="@style/checkbox_true"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_true"
+                    android:id="@+id/radio_button_true3"
+                    android:onClick="onRadioButtonClicked"/>
 
-                <CheckBox
-                    style="@style/checkbox_false"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_false"
+                    android:id="@+id/radio_button_false3"
+                    android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioButton>
 
             <TextView
                 style="@style/questions"
                 android:text="4. You should warm up every time you exercise and cool down afterward." />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <CheckBox
-                    style="@style/checkbox_true"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_true"
+                    android:id="@+id/radio_button_true4"
+                    android:onClick="onRadioButtonClicked"/>
 
-                <CheckBox
-                    style="@style/checkbox_false"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_false"
+                    android:id="@+id/radio_button_false4"
+                    android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioGroup>
 
             <TextView
                 style="@style/questions"
                 android:text="5. Water is always better then sports drinks." />
 
-            <LinearLayout
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <CheckBox
-                    style="@style/checkbox_true"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_true"
+                    android:id="@+id/radio_button_true5"
+                    android:onClick="onRadioButtonClicked"/>
 
-                <CheckBox
-                    style="@style/checkbox_false"
-                    android:onClick="onCheckboxClicked"/>
+                <RadioButton
+                    style="@style/radio_button_false"
+                    android:id="@+id/radio_button_false5"
+                    android:onClick="onRadioButtonClicked"/>
 
-            </LinearLayout>
+            </RadioButton>
 
             <TextView
                 style="@style/questions"

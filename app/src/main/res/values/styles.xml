@@ -19,14 +19,14 @@
     </style>
 
     <!--Checkbox for true answer.-->
-    <style name="checkbox_true">
+    <style name="radio_button_true">
         <item name="android:text">True</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <!-- Checkbox for false answer. -->
-    <style name="checkbox_false">
+    <style name="radio_button_false">
         <item name="android:text">False</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
