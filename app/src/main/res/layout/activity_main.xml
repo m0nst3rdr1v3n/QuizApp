@@ -29,8 +29,9 @@
                 android:gravity="center_horizontal"
                 android:text="Fitness Quiz"
                 android:textAllCaps="true"
+                android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="24dp" />
+                android:textSize="36dp" />
 
 
             <TextView
@@ -43,10 +44,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    style="@style/checkbox_true"/>
+                    style="@style/checkbox_true"
+                    android:id="@+id/checkbox_true1"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
-                    style="@style/checkbox_false"/>
+                    style="@style/checkbox_false"
+                    android:id="@+id/checkbox_false1"
+                    android:onClick="onCheckboxClicked"/>
 
             </LinearLayout>
 
@@ -60,10 +65,12 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    style="@style/checkbox_true"/>
+                    style="@style/checkbox_true"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
-                    style="@style/checkbox_false"/>
+                    style="@style/checkbox_false"
+                    android:onClick="onCheckboxClicked"/>
 
             </LinearLayout>
 
@@ -77,10 +84,12 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    style="@style/checkbox_true"/>
+                    style="@style/checkbox_true"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
-                    style="@style/checkbox_false"/>
+                    style="@style/checkbox_false"
+                    android:onClick="onCheckboxClicked"/>
 
             </LinearLayout>
 
@@ -94,10 +103,12 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    style="@style/checkbox_true"/>
+                    style="@style/checkbox_true"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
-                    style="@style/checkbox_false"/>
+                    style="@style/checkbox_false"
+                    android:onClick="onCheckboxClicked"/>
 
             </LinearLayout>
 
@@ -111,10 +122,12 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    style="@style/checkbox_true"/>
+                    style="@style/checkbox_true"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
-                    style="@style/checkbox_false"/>
+                    style="@style/checkbox_false"
+                    android:onClick="onCheckboxClicked"/>
 
             </LinearLayout>
 
@@ -130,14 +143,16 @@
                     android:id="@+id/bench_press"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bench Press"/>
+                    android:text="Bench Press"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
                     android:id="@+id/dead_lift"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="180dp"
-                    android:text="Deadlift"/>
+                    android:text="Deadlift"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
                     android:id="@+id/t_bar_row"
@@ -145,21 +160,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="180dp"
-                    android:text="Standing T-Bar Row    "/>
+                    android:text="Standing T-Bar Row"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
                     android:id="@+id/cable_row"
                     android:layout_below="@+id/bench_press"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seated Cable Row"/>
+                    android:text="Seated Cable Row"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
                     android:id="@+id/squats"
                     android:layout_below="@+id/cable_row"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Squats" />
+                    android:text="Squats"
+                    android:onClick="onCheckboxClicked"/>
 
                 <CheckBox
                     android:id="@+id/hammer_curls"
@@ -167,16 +185,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="180dp"
-                    android:text="Hammer Curls" />
+                    android:text="Hammer Curls"
+                    android:onClick="onCheckboxClicked"/>
 
             </RelativeLayout>
 
             <EditText
                 style="@style/edit_text"
+                android:id="@+id/edit_text"
                 android:inputType="textCapWords"/>
 
             <Button
-                style="@style/submit"/>
+                style="@style/submit"
+                android:onClick="submit"/>
 
         </LinearLayout>
     </ScrollView>
