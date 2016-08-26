@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This is to display the score as a toast.
+     * This is to display the score with users name as a toast.
      * @param name
      * @param startingGrade
      * @return
