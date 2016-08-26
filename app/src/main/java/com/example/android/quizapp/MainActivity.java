@@ -188,6 +188,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This is to calculate the score.
+     */
     int grade = calculateScore(isFalse, isFalse2, isFalse3, isTrue4, isFalse5, isTrue6, isTrue7, isTrue8);
     String gradeMessage = createGradeSummary(edit_text, grade);
 
@@ -195,6 +198,12 @@ public class MainActivity extends AppCompatActivity {
         return startingGrade;
     }
 
+    /**
+     * This is to display the score as a toast.
+     * @param name
+     * @param startingGrade
+     * @return
+     */
     private String createGradeSummary(String name, int startingGrade) {
         String scoreMessage = getString(R.string.edit_text);
         gradeMessage = getString(R.string.starting_grade);
