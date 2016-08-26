@@ -205,6 +205,7 @@
 
             <Button
                 style="@style/submit"
+                android:id="@+id/submit"
                 android:onClick="submit"/>
 
         </LinearLayout>

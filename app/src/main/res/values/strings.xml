@@ -4,6 +4,8 @@
 
     <string name="edit_text">Name: <xliff:g id="name" example="Amy">%s</xliff:g></string>
 
+    <!--Total score for the quiz to be displayed. [CHAR LIMIT=NONE]-->
+    <string name="starting_grade">Total Score: <xliff:g id="startingGrade" example="2">%s</xliff:g></string>
 
 
 </resources>
