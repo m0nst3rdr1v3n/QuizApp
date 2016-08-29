@@ -5,213 +5,103 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
-/**
- * This app displays a fitness quiz.
- */
 public class MainActivity extends AppCompatActivity {
 
-    int startingGrade = 0;
+    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-
-        // Check which radio button was clicked question 1.
-        switch (view.getId()) {
-            case R.id.radio_button_true1:
-                if (checked) {
-
-                }
-                // Incorrect answer
-                break;
-            case R.id.radio_button_false1:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                // Correct answer
-                break;
-        }
-        // Check which radio button was clicked question 2.
-        switch (view.getId()) {
-            case R.id.radio_button_true2:
-                if (checked) {
-
-                }
-                // Incorrect answer
-                break;
-            case R.id.radio_button_false2:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                // Correct answer
-                break;
-        }
-        // Check which radio button was clicked question 3.
-        switch (view.getId()) {
-            case R.id.radio_button_true3:
-                if (checked) {
-
-                }
-                // Incorrect answer
-                break;
-            case R.id.radio_button_false3:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                // Correct answer
-                break;
-        }
-        // Check which radio button was clicked question 4.
-        switch (view.getId()) {
-            case R.id.radio_button_true4:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                // Correct answer
-                break;
-            case R.id.radio_button_false4:
-                if (checked) {
-
-                }
-                // Incorrect answer.
-                break;
-        }
-
-        // Check which radio button was clicked question 5.
-        switch (view.getId()) {
-            case R.id.radio_button_true5:
-                if (checked) {
-
-                }
-                // Incorrect answer
-                break;
-            case R.id.radio_button_false5:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                // Correct answer
-                break;
-        }
-    }
-
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        // Check which checkbox was clicked for question 6 answers.
-        switch (view.getId()) {
-            //Incorrect
-            case R.id.bench_press:
-                if (checked) {
-
-                }
-                break;
-            //Correct
-            case R.id.dead_lift:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                break;
-            //Correct
-            case R.id.t_bar_row:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                break;
-            //Incorrect
-            case R.id.squats:
-                if (checked) {
-
-                }
-                break;
-            //Incorrect
-            case R.id.hammer_curls:
-                if (checked) {
-
-                }
-                break;
-            //Correct
-            case R.id.cable_row:
-                if (checked) {
-                    startingGrade = startingGrade + 1;
-                }
-                break;
-
-        }
-    }
-
-
-    /**
-     * This method is called when the submit button is clicked.
-     *
-     * @param view
-     */
     public void submit(View view) {
-        EditText nameField = (EditText) findViewById(R.id.edit_text);
-        String name = nameField.getText().toString();
 
-        RadioButton radioButtonFalse = (RadioButton) findViewById(R.id.radio_button_false1);
-        boolean isFalse = radioButtonFalse.isChecked();
+        int totalScore = calculateScore();
 
-        RadioButton radioButtonFalse2 = (RadioButton) findViewById(R.id.radio_button_false2);
-        boolean isFalse2 = radioButtonFalse2.isChecked();
 
-        RadioButton radioButtonFalse3 = (RadioButton) findViewById(R.id.radio_button_false3);
-        boolean isFalse3 = radioButtonFalse3.isChecked();
+        // Display a toast message when user submit answers
+        Toast.makeText(this, "You have a total of: " + totalScore + " out of 7 CORRECT!", Toast.LENGTH_SHORT).show();
 
-        RadioButton radioButtonTrue4 = (RadioButton) findViewById(R.id.radio_button_true4);
-        boolean isTrue4 = radioButtonTrue4.isChecked();
-
-        RadioButton radioButtonFalse5 = (RadioButton) findViewById(R.id.radio_button_false5);
-        boolean isFalse5 = radioButtonFalse5.isChecked();
-
-        CheckBox deadLiftCheckbox = (CheckBox) findViewById(R.id.dead_lift);
-        boolean isTrue6 = deadLiftCheckbox.isChecked();
-
-        CheckBox tBarRowCheckbox = (CheckBox) findViewById(R.id.t_bar_row);
-        boolean isTrue7 = tBarRowCheckbox.isChecked();
-
-        CheckBox cableRowCheckbox = (CheckBox) findViewById(R.id.cable_row);
-        boolean isTrue8 = cableRowCheckbox.isChecked();
-
+        // Run method to reset score
+        resetScore();
 
     }
 
-    /**
-     * This is to calculate the score.
-     */
-    int grade = calculateScore(isFalse, isFalse2, isFalse3, isTrue4, isFalse5, isTrue6, isTrue7, isTrue8);
-    String gradeMessage = createGradeSummary(edit_text, grade);
+    private int calculateScore() {
 
-    private int calculateScore(boolean isTrue, boolean isFalse, boolean checked) {
-        return startingGrade;
-    }
+        RadioGroup questionGroupOne = (RadioGroup) findViewById(R.id.radio_group_1);
+        int questionOne = questionGroupOne.getCheckedRadioButtonId();
 
-    /**
-     * This is to display the score with users name as a toast.
-     * @param name
-     * @param startingGrade
-     * @return
-     */
-    private String createGradeSummary(String name, int startingGrade) {
-        String scoreMessage = getString(R.string.edit_text);
-        gradeMessage = getString(R.string.starting_grade);
-        return scoreMessage;
-
-        if (scoreMessage == scoreMessage){
-            Toast.makeText(this, "Your total score is " getString(R.string.starting_grade)  "out of 8!", Toast.LENGTH_LONG).show();
+        if (questionOne == R.id.radio_button_false1) {
+            score = score + 1;
         }
+        RadioGroup questionGroupTwo = (RadioGroup) findViewById(R.id.radio_group_2);
+        int questionTwo = questionGroupTwo.getCheckedRadioButtonId();
+
+        if (questionTwo == R.id.radio_button_false2) {
+            score = score + 1;
+        }
+
+        RadioGroup questionGroupThree = (RadioGroup) findViewById(R.id.radio_group_3);
+        int questionThree = questionGroupThree.getCheckedRadioButtonId();
+
+        if (questionThree == R.id.radio_button_false3) {
+            score = score + 1;
+        }
+
+        RadioGroup questionGroupFour = (RadioGroup) findViewById(R.id.radio_group_4);
+        int questionFour = questionGroupFour.getCheckedRadioButtonId();
+
+        if (questionFour == R.id.radio_button_true4) {
+            score = score + 1;
+        }
+        RadioGroup questionGroupFive = (RadioGroup) findViewById(R.id.radio_group_5);
+        int questionFive = questionGroupFive.getCheckedRadioButtonId();
+
+        if (questionFive == R.id.radio_button_false5) {
+            score = score + 1;
+        }
+
+        /**
+         * Checkbox answer question 6.
+         */
+
+
+        CheckBox tBarRowChecked = (CheckBox) findViewById(R.id.t_bar_row);
+        boolean hastBarRowChecked = tBarRowChecked.isChecked();
+
+        CheckBox deadLiftChecked = (CheckBox) findViewById(R.id.dead_lift);
+        boolean hasDeadLiftChecked = deadLiftChecked.isChecked();
+
+        CheckBox cableRowChecked = (CheckBox) findViewById(R.id.cable_row);
+        boolean hasCableRowChecked = cableRowChecked.isChecked();
+
+        if (hasDeadLiftChecked && hastBarRowChecked && hasCableRowChecked) {
+            score = score + 1;
+        }
+
+        EditText textField = (EditText) findViewById(R.id.answer_edit_text);
+        String answerText = textField.getText().toString();
+
+        // Question with EditText question 7
+        if (answerText.equals("False")) {
+            score = score + 1;
+        }
+
+        return score;
     }
 
+    /**
+     * Set score back to 0
+     */
+    private void resetScore() {
+
+        score = 0;
+    }
 }
