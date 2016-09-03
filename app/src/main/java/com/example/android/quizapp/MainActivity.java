@@ -82,15 +82,26 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cableRowChecked = (CheckBox) findViewById(R.id.cable_row);
         boolean hasCableRowChecked = cableRowChecked.isChecked();
 
-        if (hasDeadLiftChecked && hastBarRowChecked && hasCableRowChecked) {
+        CheckBox squatsChecked = (CheckBox) findViewById(R.id.squats);
+        boolean hasSquatsChecked = squatsChecked.isChecked();
+
+        CheckBox hammerCurlsChecked = (CheckBox) findViewById(R.id.hammer_curls);
+        boolean hasHammerCurlsChecked = hammerCurlsChecked.isChecked();
+
+        CheckBox benchPressChecked = (CheckBox) findViewById(R.id.bench_press);
+        boolean hasBenchPressChecked = benchPressChecked.isChecked();
+
+
+        if (deadLiftChecked.isChecked() && tBarRowChecked.isChecked() && cableRowChecked.isChecked() && !benchPressChecked.isChecked() && !hammerCurlsChecked.isChecked() && !squatsChecked.isChecked()) {
             score = score + 1;
         }
+
 
         EditText textField = (EditText) findViewById(R.id.answer_edit_text);
         String answerText = textField.getText().toString();
 
         // Question with EditText question 7
-        if (answerText.equals("False")) {
+        if (answerText.equalsIgnoreCase("False")) {
             score = score + 1;
         }
 
@@ -104,4 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
         score = 0;
     }
+
+
 }

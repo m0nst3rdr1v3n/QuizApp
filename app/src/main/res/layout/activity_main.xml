@@ -191,7 +191,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cable_row"
-                    android:onClick="onCheckboxClicked"
                     android:text="Squats" />
 
                 <CheckBox
