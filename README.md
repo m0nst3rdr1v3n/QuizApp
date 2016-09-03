@@ -12,4 +12,6 @@ Question types:
 
 *Checkboxes are only used for questions with multiple right answers. Radio buttons are only used for questions with a single right answer.
 
+![layout-2016-09-02-203115](https://cloud.githubusercontent.com/assets/10607949/18221565/57ac24f4-714d-11e6-8f88-6003346ad7d5.png)
+
 
